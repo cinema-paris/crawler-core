@@ -7,20 +7,12 @@ module Crawler
     extend ActiveSupport::Concern
 
     class_methods do
-      def add_provider(provider_name, options = {})
+      def add_provider(_provider_name, _options = {})
         raise NotImplementedError
       end
 
       def configure
         yield self
-      end
-
-      def search(*args)
-        raise NotImplementedError
-      end
-
-      def best(*args)
-        raise NotImplementedError
       end
     end
   end
